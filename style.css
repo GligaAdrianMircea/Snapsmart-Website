@@ -328,8 +328,8 @@ h6 {
 
 .team-detail img {
 	border-radius: 50%;
-	width: 70%;
-	height:235px;
+	/* width: 90%; */
+	height:70%;
 }
 .team-detail h4 {
 	color:#01A7C2;
@@ -649,7 +649,6 @@ h3 {
 .hero_second_btn{
 	width:150px;
 	height:50px;
-
 	border: 5px solid #01A7C2;
 	border-radius: 10px;
 	display: grid;
@@ -660,7 +659,7 @@ h3 {
 
 .hero_second_mouseover{
 	border: none !important ;
-	background-color: #f3a840 !important;
+	background-color: #01A7C2 !important;
 }
 .hero_second_mouseover_bottom{
 	border: none !important ;
@@ -678,8 +677,50 @@ h3 {
 	background-image: url(./images/Group\ 78.png);
 	background-size: cover;
 }
+.test_big_container{
+	display: flex;
+	justify-content: center;
+}
 .phone_container{
-	/* height:350px */
+	/* background-color: red; */
+	width: 350px;
+	height: 730px;
+	background-image: url(./images/Dynamic\ island\ empty.png);
+	box-sizing: border-box;
+	background-size: cover;
+	padding-top: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
+	overflow: hidden;
+	padding-bottom: 15px;
+}
+@media all and (max-width:768px){
+	.phone_container{
+		height: 690px;
+	}
+}
+@media all and (min-width:1200px) and (max-width:1300px){
+	.phone_container{
+		height: 730px;
+	}
+}
+@media all and (min-width:1000px) and (max-width:1200px){
+	.phone_container{
+		height: 610px;
+	}
+}
+@media all and (min-width:768px) and (max-width:1000px){
+	.phone_container{
+		height: 450px;
+	}
+}
+.upload_btn{
+	width: 100px;
+	height: 100px;
+	background-color: #01A7C2;
+}
+/* .phone_container{
+	height:350px
 }
 .phone_frame{
 	background-image: url(./images/Dynamic\ island\ empty.png);
@@ -696,13 +737,14 @@ h3 {
 	width: 320px;
 	height: 663px;
 	border-radius: 50px;
-	
-	
+	display: flex;
+	display: grid;
+	overflow: hidden;
 }
 @media all and (max-width:768px){
 	.phone_frame{
 		width:320px;
-		/* height:700px; */
+		height:700px;
 		margin-left: 23%;
 	}
 	.phone_container_new{
@@ -717,8 +759,7 @@ h3 {
 @media all and (min-width:768px) and (max-width:991px){
 	.phone_frame{
 		width:320px;
-		/* height:700px; */
-		/* margin-left: 20%; */
+		height:700px;
 		margin-left: -19%;
 	}
 	.phone_container_new{
@@ -728,5 +769,5 @@ h3 {
 	margin-top: 29px;
 	margin-left: -2px;
 	border-radius: 49px;
-}
-}
+	}
+} */
