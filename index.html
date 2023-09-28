@@ -27,7 +27,7 @@
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Blinker:wght@600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Blinker::wght@400;600&display=swap"
       rel="stylesheet"
     />
     <!-- Favicon -->
@@ -463,11 +463,56 @@
                 <div class="col-md-4 phone_container">
                   <!-- <div class="wow bounce phone_frame" data-wow-delay="0.4s"> -->
                     <!-- <div class="phone_container_new"> -->
-                      <h1>Upload Image</h1>
-                      <form class="upload_form" id="uploadForm">
-                        <input type="file" id="inpFile"></input>
-                        <button type="submit" class="upload_btn"> something</button>
-                      </form>
+                      <!-- ********* -->
+                      <!-- Start Screen -->
+                      <!-- ********* -->
+                      <div class="start_screen">
+                        <div class="logo"></div>
+                        <div class="image"></div>
+                        <div class="text1">Unlock Your Potential, Learn Anywhere, Anytime!</div>
+                        <div class="text2">Our e-learning platform is a revolutionary online education platform designed to provide learners with a seamless and immersive learning experience. We offer a wide range of courses and resources that cater to learners of all ages and backgrounds.</div>
+                        <div class="start" id="startBtn"><p>Start</p></div>
+                      </div>
+                      <!-- ********* -->
+                      <!-- Main Screen -->
+                      <!-- ********* -->
+                      <div class="main_screen">
+                        <div class="frame">
+                          <div class="image_qoute"></div>
+                          <form class="upload_form" id="uploadForm">
+                            
+                            <input type="file" id="inpFile" onchange="uploadFile(this)"></input>
+                            <label for="inpFile">
+                              <div class="file_name_container"><span id="file_name"></span></div>
+                              <div class="button_main"><div class="image_main"></div></div>
+                            </label>
+                            <button type="submit" class="upload_btn"> Upload</button>
+                          </form>
+                          <p id="error"></p>
+                        </div>
+                      </div>
+                      <!-- ********* -->
+                      <!-- Loading Screen -->
+                      <!-- ********* -->
+                      <div class="loading_screen"><div class="custom-loader"></div></div>
+                      <!-- ********* -->
+                      <!-- Success Screen -->
+                      <!-- ********* -->
+                      <div class="success_screen">
+                        <div class="image"></div>
+                        <div class="message">Page successfully Analyzed</div>
+                        <div class="text_1"><span>Subject</span><span id="subject"  style="color:#f3a840">XXXXX</span></div>
+                        <div class="text_2"><span>Difficulty</span><span id="difficulty" style="color:#01a7c2">XXXXX</span></div>
+                        <div class="text_3"><span>Questions</span><span id="questions" style="color:#f3a840">XXXXX</span></div>
+                        <div class="button" id="startTestBtn">Start</div>
+                      </div>
+                      <!-- ********* -->
+                      <!-- Test Screen -->
+                      <!-- ********* -->
+                      <div class="test_screen">
+                        
+                      </div>
+                      
                     <!-- </div> -->
                   <!-- </div> -->
                 </div>
@@ -478,7 +523,6 @@
         </div>
       </div>
     </section>
-
     <!-------Phone Test End------->
 
     <!-------FAQ Start------->
