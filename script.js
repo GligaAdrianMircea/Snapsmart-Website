@@ -46,10 +46,10 @@ secondBtn[1].addEventListener("mouseout", () => {
 // }
 let qoutes = [
   "Live as if you were to die tomorrow. Learn as if you were to live forever.",
-   "Education is not the filling of a pail, but the lighting of a fire.",
-   "Education is not preparation for life; education is life itself.",
-   "The roots of education are bitter, but the fruit is sweet.",
-   "Education is the key to unlocking the world, a passport to freedom.",
+  "Education is not the filling of a pail, but the lighting of a fire.",
+  "Education is not preparation for life; education is life itself.",
+  "The roots of education are bitter, but the fruit is sweet.",
+  "Education is the key to unlocking the world, a passport to freedom.",
   "An investment in knowledge pays the best interest.",
   "The beautiful thing about learning is that no one can take it away from you.",
 ]
@@ -70,9 +70,9 @@ let fileName = document.querySelector("#file_name")
 function uploadFile(target) {
   fileName.innerHTML = target.files[0].name
 }
-let randomNr=Math.floor((Math.random()*6))
-let qoute=document.querySelector(".image_qoute")
-qoute.textContent=qoutes[randomNr]
+let randomNr = Math.floor(Math.random() * 6)
+let qoute = document.querySelector(".image_qoute")
+qoute.textContent = qoutes[randomNr]
 const myForm = document.getElementById("uploadForm")
 const inpFile = document.getElementById("inpFile")
 
@@ -98,28 +98,34 @@ myForm.addEventListener("submit", async (e) => {
     const formData = new FormData()
     formData.append("image", inpFile.files[0])
     let test = null
-    document.querySelector(".main_screen").classList.add = "fade"
-    await fetch("https://snapsmart-api.onrender.com/v1/tests", {
-      method: "POST",
-      mode: "cors",
-      headers: {
-        ACCESS_TOKEN:
-          "IH4bGrgADT8Qk3Ma3wYJ6GsuZaLFxQogWayDshUUeZwDa9RH9FaResUPaP97378R",
-        HTTP_ACCESS_TOKEN:
-          "IH4bGrgADT8Qk3Ma3wYJ6GsuZaLFxQogWayDshUUeZwDa9RH9FaResUPaP97378R",
-        "Access-Control-Allow-Origin": "*",
-      },
-      body: formData,
-    }).then((response) => {
-      test = response.json()
-    })
-    document.querySelector("#subject").textContent=test.subject
-    document.querySelector("#difficulty").textContent = test.difficulty
-    document.querySelector("#questions").textContent = test.number_of_questions
-    document.querySelector(".loading_screen").classList.add("fade")
-    document.querySelector("#startTestBtn").addEventListener("click",()=>{
-      document.querySelector(".success_screen").classList.add("fade")
-      
+    document.querySelector(".main_screen").classList.add("screen_exit")
+    // await fetch("https://snapsmart-api.onrender.com/v1/tests", {
+    //   method: "POST",
+    //   mode: "cors",
+    //   headers: {
+    //     ACCESS_TOKEN:
+    //       "IH4bGrgADT8Qk3Ma3wYJ6GsuZaLFxQogWayDshUUeZwDa9RH9FaResUPaP97378R",
+    //     HTTP_ACCESS_TOKEN:
+    //       "IH4bGrgADT8Qk3Ma3wYJ6GsuZaLFxQogWayDshUUeZwDa9RH9FaResUPaP97378R",
+    //     "Access-Control-Allow-Origin": "*",
+    //   },
+    //   body: formData,
+    // }).then((response) => {
+    //   test = response.json()
+    // })
+    console.log(test)
+
+    document.querySelector("#subject").textContent = "test.subject"
+    document.querySelector("#difficulty").textContent = "test.difficulty"
+    document.querySelector("#questions").textContent =
+      "test.number_of_questions"
+    // document.querySelector("#subject").textContent = test.subject
+    // document.querySelector("#difficulty").textContent = test.difficulty
+    // document.querySelector("#questions").textContent = test.number_of_questions
+    document.querySelector(".loading_screen").classList.add("screen_exit")
+    document.querySelector("#startTestBtn").addEventListener("click", () => {
+      document.querySelector(".success_screen").classList.add("screen_exit")
+      //Test Element
     })
   }
 })
