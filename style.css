@@ -951,6 +951,7 @@ label{
 	font-size: 23px;
 	color:#3f3f3f;
 	box-shadow: -1px 1px 3px 0px rgba(0, 0, 0, 0.10), -4px 5px 6px 0px rgba(0, 0, 0, 0.09), -8px 10px 8px 0px rgba(0, 0, 0, 0.05), -14px 18px 9px 0px rgba(0, 0, 0, 0.01), -22px 29px 10px 0px rgba(0, 0, 0, 0.00);
+	cursor: pointer;
 }
 
 /* Test Screen */
@@ -963,12 +964,19 @@ label{
 	border-radius: 50px;
 	background-color: #f5f5f5;
 	z-index: 96;
-	padding-left: 20px;
-	padding-right: 20px;
+	
 	/* visibility: hidden; */
 }
+.test_question{
+	height: 100%;
+	/* background-color: red; */
+	overflow: hidden;
+	border-radius: 50px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
 .current_rating{
-	margin-top: 10px;
+	margin-top: 100%;
 	font-size: 15px;
 	width: 70px;
 	display: grid;
@@ -996,23 +1004,27 @@ label{
 }
 .answer{
 	font-size: 20px;
-	max-width: 200px;
+	width: 250px;
 	/* width: auto; */
 	height: auto; 
-	display: grid;
-	place-content: center;
+	display: flex;
+	justify-content: center;
 	overflow: hidden;
 	margin-left: auto;
 	margin-right: auto;
 	box-sizing: border-box;
 	padding-top: 5px;
 	padding-bottom: 5px;
-	padding-left: 100px;
-	padding-right: 100px;
+	/* padding-left: 100px;
+	padding-right: 100px; */
 	margin-top: 20px;
 	border-radius: 10px;
 	background-color: #F3A840;
 	color: #f5f5f5;
+	cursor: pointer;
+}
+input{
+	display: none;
 }
 .question_nr{
 	position: absolute;
@@ -1167,3 +1179,40 @@ label{
 	border-radius: 49px;
 	}
 } */
+/*  function changeText(Q, answer1, answer2, answer3, answer4) {
+        document.querySelector("#question").innerHTML = Q
+        document.querySelector("#answerText1").innerHTML = answer1
+        document.querySelector("#answerText2").innerHTML = answer2
+        document.querySelector("#answerText3").innerHTML = answer3
+        document.querySelector("#answerText4").innerHTML = answer4
+      }
+      let length = test.number_of_questions
+      let i = 0
+      while (i < length) {
+        
+        changeText(
+          test.questions[i].content,
+          test.questions[i].choices[0],
+          test.questions[i].choices[1],
+          test.questions[i].choices[2],
+          test.questions[i].choices[3]
+        )
+        const radioButtons = document.querySelectorAll('input[name="answer"]')
+        console.log(radioButtons)
+        async function m() {
+          radioButtons.forEach(function (radioButton) {
+            radioButton.addEventListener("change", function () {
+              const selectedOption = document.querySelector(
+                'input[name="answer"]:checked'
+              )
+
+              if (selectedOption) {
+                const optionValue = selectedOption.value
+                console.log("Selected Gender:", optionValue)
+                i++
+              }
+            })
+          })
+        }
+        m()
+      } */

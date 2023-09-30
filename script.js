@@ -113,19 +113,104 @@ myForm.addEventListener("submit", async (e) => {
     // }).then((response) => {
     //   test = response.json()
     // })
-    console.log(test)
-
-    document.querySelector("#subject").textContent = "test.subject"
-    document.querySelector("#difficulty").textContent = "test.difficulty"
-    document.querySelector("#questions").textContent =
-      "test.number_of_questions"
-    // document.querySelector("#subject").textContent = test.subject
-    // document.querySelector("#difficulty").textContent = test.difficulty
-    // document.querySelector("#questions").textContent = test.number_of_questions
+    // console.log(test)
+    test = {
+      subject: "George Feydeau",
+      difficulty: "medium",
+      id: 92,
+      number_of_questions: 5,
+      questions: [
+        {
+          choices: [
+            "8 December 1862",
+            "5 June 1921",
+            "1886-1914",
+            "6 July 1980 capybara",
+          ],
+          content: "When was Georges Feydeau born?",
+          correct_answer: "8 December 1862",
+          points_received: 2,
+        },
+        {
+          choices: ["Tragedies", "Romantic novels", "Farces", "capybara"],
+          content: "What is Georges Feydeau know for?",
+          correct_answer: "Farces",
+          points_received: 2,
+        },
+        {
+          choices: [
+            "Eugene Labiche, Alfred Hennequin, Henri Meilhac",
+            "Shaspeare, Moliere, Goethe",
+            "George Bernard Shaw, Anton Chekhov, Henrik Ibsen",
+            "Bonaparte, JK Rolaing, Capybara",
+          ],
+          content:
+            "Who are some of the erlier masters of french comedy that George Feydeau studied?",
+          correct_answer: "Eugene Labiche, Alfred Hennequin, Henri Meilhac",
+          points_received: 2,
+        },
+        {
+          choices: [
+            "Depression, unsuccesful gambling, divorce",
+            "Succes in his carrer, happy family life, travel",
+            "Sports,music,cookin",
+            "Capybara, capybara, capybara",
+          ],
+          content: "What impacted George Feydeau's personal life?",
+          correct_answer: "Depression, unsuccesful gambling, divorce",
+          points_received: 2,
+        },
+      ],
+    }
+    // document.querySelector("#subject").textContent = "test.subject"
+    // document.querySelector("#difficulty").textContent = "test.difficulty"
+    // document.querySelector("#questions").textContent =
+    //   "test.number_of_questions"
+    document.querySelector("#subject").textContent = test.subject
+    document.querySelector("#difficulty").textContent = test.difficulty
+    document.querySelector("#questions").textContent = test.number_of_questions
     document.querySelector(".loading_screen").classList.add("screen_exit")
+
     document.querySelector("#startTestBtn").addEventListener("click", () => {
       document.querySelector(".success_screen").classList.add("screen_exit")
       //Test Element
+      function changeText(Q, answer1, answer2, answer3, answer4) {
+        document.querySelector("#question").innerHTML = Q
+        document.querySelector("#answer1").innerHTML = answer1
+        document.querySelector("#answer2").innerHTML = answer2
+        document.querySelector("#answer3").innerHTML = answer3
+        document.querySelector("#answer4").innerHTML = answer4
+      }
+      let Q1 = test.questions[0].content
+      let Q2 = test.questions[1].content
+      let Q3 = test.questions[2].content
+      let Q4 = test.questions[3].content
+      let Q5 = test.questions[4].content
+
+      let a11 = test.questions[0].choices[0]
+      let a12 = test.questions[0].choices[1]
+      let a13 = test.questions[0].choices[2]
+      let a14 = test.questions[0].choices[3]
+
+      let a21 = test.questions[1].choices[0]
+      let a22 = test.questions[1].choices[1]
+      let a23 = test.questions[1].choices[2]
+      let a24 = test.questions[1].choices[3]
+
+      let a31 = test.questions[2].choices[0]
+      let a32 = test.questions[2].choices[1]
+      let a33 = test.questions[2].choices[2]
+      let a34 = test.questions[2].choices[3]
+
+      let a41 = test.questions[3].choices[0]
+      let a42 = test.questions[3].choices[1]
+      let a43 = test.questions[3].choices[2]
+      let a44 = test.questions[3].choices[3]
+
+      let a51 = test.questions[4].choices[0]
+      let a52 = test.questions[4].choices[1]
+      let a53 = test.questions[4].choices[2]
+      let a54 = test.questions[4].choices[3]
     })
   }
 })
