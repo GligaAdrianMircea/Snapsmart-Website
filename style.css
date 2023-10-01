@@ -848,7 +848,7 @@ label{
 	display: grid;
 	place-content: center;
 	margin-left: auto;
-	/* margin-top: 20px; */
+	
 	margin-right: auto;
 	background-color: #F3A840;
 	border-radius: 50%;
@@ -1029,13 +1029,14 @@ label{
 }
 .question{
 	font-size: 23px;
-	height: 250px;
+	height: 200px;
 	display: grid;
+	border-radius: 50px;
 	place-content: center;
 	/* background-color: rgb(255, 0, 0); */
 	color: #3f3f3f;
 	text-shadow: 0.2px 0.2px 0px #3f3f3f, -0.2px -0.2px 0px #3f3f3f, 0.2px -0.2px 0px #3f3f3f, -0.2px 0.2px 0px #3f3f3f;
-	/* margin-top: -5px; */
+	
 	margin-bottom: -20px;
 }
 .answer{
@@ -1097,7 +1098,7 @@ input{
 	width: 80px;
 	height: 80px;
 	background-image: url(./images/firework.png);
-	/* transform: rotateY(90deg); */
+	
 	background-size: cover;
 	display: inline;
 
@@ -1202,7 +1203,7 @@ input{
 	animation: slide-out-right 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 .screen-exit-top{
-	/* animation: slide-out-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both; */
+	
 	animation: scale-out-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 	margin-bottom: 0 !important;
 }
@@ -1218,20 +1219,6 @@ input{
 		height: 0;
   }
 }
-
-/* @keyframes slide-out-top {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-		height: 100%;
-  }
-  100% {
-    transform: translateY(-1000px);
-    opacity: 0;
-		height: 0;
-  }
-} */
-
 @keyframes slide-out-right {
   0% {
     transform: translateX(0);
@@ -1295,7 +1282,6 @@ input{
 	
 	background-color:#90BE6D !important;
 }
-
 .wrong{
 	
 	background-color:#F8312F !important;
@@ -1303,7 +1289,9 @@ input{
 .visible_now{
 	z-index: 100 !important;
 }
-
+.fail_image{
+	background-image: url(./images/Close_square_fill.png) !important;
+}
 /* .phone_container{
 	height:350px
 }
